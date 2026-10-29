@@ -1,0 +1,467 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage{jheppub} % for details on the use of the package, please see the JINST-author-manual
+\usepackage{lineno}
+%\linenumbers
+\usepackage{amsmath}
+\DeclareMathOperator{\Tr}{Tr}
+
+\arxivnumber{1234.56789} % if you have one
+
+\title{\boldmath A title with some math: $x=1$}
+
+% Collaborations
+
+%% [A] If main author
+%% \collaboration{\includegraphics[height=17mm]{collabroation-logo}\\[6pt]
+%%  XXX collaboration}
+
+%% or
+%% [B] If "on behalf of"
+%% \collaboration[c]{on behalf of XXX collaboration}
+
+
+% Authors
+% The "\note" macro will give a warning: "Ignoring empty anchor...", you can safely ignore it.
+
+%% [A] simple case: 2 authors, same institution
+%% \author[1]{A. Uthor\note{Corresponding author.}}
+%% \author{and A. Nother Author}
+%% \affiliation{Institution,\\Address, Country}
+
+%% or, e.g.
+%% [B] more complex case: 4 authors, 3 institutions, 2 footnotes
+%% \author[a,b]{F. Irst,\note{Now at another university}}
+%% \author[c]{S. Econd,}
+%% \author[a,2]{T. Hird\note{Also at Some University.}}
+%% \author[c,2]{and Fourth}
+%% \affiliation[a]{Institution_1,\\Address, Country}
+%% \affiliation[b]{Institution_2,\\Address, Country}
+%% \affiliation[c]{Institution_3,\\Address, Country}
+
+\author{A. Uthor}
+\affiliation{One University,\\
+some-street, Country}
+\affiliation{Another University,\\
+different-address, Country}
+
+% E-mail addresses: only for the corresponding author
+\emailAdd{first@one.univ}
+
+\abstract{Abstract...}
+
+
+
+\begin{document}
+\maketitle
+\flushbottom
+
+\section{Introduction}
+\label{sec:Introduction}
+
+\section{Toroidal Near-Extremal Black Brane}
+\label{sec:Toroidal Near-Extremal Black Brane}
+In this section, we discuss the Toroidal Near-Extremal Black Brane solution in $AdS_4$ and the physically relevant scales that arise in this setup.\\
+
+We start with the action,
+\begin{equation}
+    S=\frac{1}{16\pi G} \int_{ M} d^4x \sqrt{-g}(R-2\Lambda)-\frac{1}{4G}\int_{ M} d^4x \sqrt{-g}F^2 +\frac{1}{8\pi G}\int_{\partial M} d^3x \sqrt{-\gamma}K
+\end{equation}
+
+Which admits the following 4D metric as solution\\
+\begin{equation}
+    ds^2= -a(r)^2 dt^2 + \frac{dr^2}{a(r)^2} + b(r)^2(dx^2 +dy^2)
+\end{equation}
+
+\begin{align}
+    a(r)^2=1-\frac{2GM}{r} + \frac{4\pi Q^2}{r^2} +\frac{r^2}{L^2}\\
+    b(r)^2=r^2\\
+    F_{xy}=\frac{Q_M}{r^2}
+\end{align}
+This is the charged Black brane solution with $M$ and $Q_M$ being the mass and magnetic charge of the Black brane respectively. $AdS_4$ radius L is related to $\Lambda$ by,
+\begin{equation}
+    L=\sqrt\frac{3}{|\Lambda|}
+\end{equation}
+The black brane solution becomes extremal at,\\
+\begin{align}
+    Q_{ext}=\frac{1}{4\pi}\big(r_h^2 +\frac{3r_h^4}{L^2}\big)\\
+    M_{ext}=\frac{r_h}{G}\big(1 +\frac{2r_h^2}{L^2}\big)\\
+    a^2(r)= \frac{(r-r_h)^2}{r^2L^2}(L^2 +3r_h^2+ 2rr_h+r^2)\\
+\end{align}
+Where $r_h$ is the horizon radius.\\    
+We are interested in near-extremal black branes, therefore $M>Q$. The two zeroes of $a(r)$ are not co-incident but are at $r_+$ and $r_-$. Since we are close to extremality, 
+\begin{align}
+    r_\pm \approx r_h \pm \delta r_h \\
+    \delta r_h \ll r_h \label{Eq: Near ext}
+\end{align}
+
+We work with large black branes, 
+\begin{equation}\label{Eq: Large}
+    r_+>>L 
+\end{equation}
+
+Then the near horizon region $r-r_+<<r_+$, has the geometry
+\begin{equation}
+    ds^2= -\frac{(r-r_+)(r-r_-)}{L_2^2}dt^2 + \frac{L_2^2}{(r-r_+)(r-r_-)}dr^2 +r_h^2(dx^2 +dy^2) + \mathcal{O}(\frac{r-r_+}{r_+})\ \text{corrections}
+\end{equation}
+
+So, the near horizon region factorizes into $AdS_2 \times S^2$, where
+\begin{align}
+    L_2 \approx \frac{L}{\sqrt{6}}\\
+    R_{S^2} \approx r_h
+\end{align}
+
+The asymptotic $AdS_2$ boundary, where the $AdS_2$ throat connects to the $AdS_4$, is given by 
+\begin{equation}
+    r-r_h>>L_2
+\end{equation}
+
+Note that for a large black branes \ref{Eq: Large}, asymptotic $AdS_2$ boundary can lie in near horizon region,
+\begin{equation}
+    L_2 \ll r-r_h \ll r_h
+\end{equation}
+
+The chemical potential and temperature for the black brane is given by
+\begin{align}
+    \mu \sim \frac{r_h}{L^2} \\
+    T\sim \frac{\delta r_h}{L^2}
+\end{align}
+
+Since we are close to extremality \ref{Eq: Near ext},
+\begin{equation}\label{Eq:T\mu}
+    \delta r_h \ll r_h \implies T \ll \mu
+\end{equation}
+
+We restate the chain of logic that sets the various scales. First, near-extremality sets $ \delta r_h \ll r_h$, then we work with large black branes which gives us $L\ll r_h$. Requiring that asymptotic $AdS_2$ region lies in near horizon region gives $L_2\ll r-r_h \ll r_h$.
+Above conditions set $\mu \ll T$
+
+\section{Kaluza- Klein reduction of $AdS_4$}
+(Write why showing shear mode behaves like scalar helps us predict the leading 3rd order non linear correction in fluid gravity).\\
+In previous sections, we analysed the four point function of a minimally coupled probe scalar in the near-extremal black brane background. While it is known that a minimally coupled scalar behaves same as the shear mode of metric peturbation in AdS backgrounds(at least at the 2 point function level), we show that it continues to hold for leading corrections to four point function in the Near extremal AdS background.\\
+
+We start with the 4D action
+\begin{equation}
+S_4=\frac{1}{16\pi G_4}\int_{\mathcal M} d^4x\,\sqrt{-G}\,\big(R_{(4)}-2\Lambda\big)
++\frac{1}{8\pi G_4}\int_{\partial\mathcal M} d^3x\,\sqrt{-\Gamma}\,K
+-\frac{1}{4G_4}\int d^4x\,\sqrt{-G}\,F^2 .
+\label{eq:KK-S4}
+\end{equation}
+Using the KK ansatz,
+\begin{equation}
+G_{AB}\,dX^A dX^B=g_{\mu\nu}\,dx^\mu dx^\nu+\Phi_{ab}\,dy^a dy^b
+\label{eq:KK-ansatz}
+\end{equation}
+(we work in $l=0$, hence KK gauge fields are absent).
+
+The reduced action becomes:
+\begin{equation}
+\begin{aligned}
+S={}&\frac{V_2}{16\pi G_4}\int_{\mathcal M} d^2x\,\sqrt{-g}\,\sqrt{+\det\Phi}\,
+\Big[R-2\Lambda
++\underbrace{\frac14\,g^{\mu\nu}\,\text{Tr}\!\big(\Phi^{-1}\partial_\mu\Phi\big)\,\text{Tr}\!\big(\Phi^{-1}\partial_\nu\Phi\big)}_{\text{I}}\\
+&\hspace{4.2cm}-\underbrace{\frac14\,g^{\mu\nu}\,\text{Tr}\!\big(\Phi^{-1}\partial_\mu\Phi\,\Phi^{-1}\partial_\nu\Phi\big)}_{\text{II}}\Big]\\
+&+\frac{V_2}{8\pi G_4}\int_{\partial\mathcal M} dx\,\sqrt{-\gamma}\,\big(\det\Phi\big)^{1/2}K\;+\;S_{\text{Maxwell}}
+\end{aligned}
+\label{eq:KK-reduced}
+\end{equation}
+
+\textbf{Term I:}
+using $\text{Tr}(\Phi^{-1}\partial_\mu \Phi)= \partial_\mu \text{Tr}(\text{ln} \Phi)= \partial_\mu \text{ln} \text{ det}(\Phi)$, let 
+\begin{equation}
+  \Phi= vM  \ \  \text{where} \ \ \det(M)=1 \implies  \det \Phi= v^2
+\end{equation}
+\begin{equation}
+\text{I}=\frac14\,g^{\mu\nu}\,\partial_\mu\ln(v^2)\,\partial_\nu\ln(v^2) = \frac{1}{ v^2} \partial_\mu v \partial_\nu v
+\label{eq:KK-termI}
+\end{equation}
+
+\textbf{Tern II:}\\
+Substituting $\Phi=vM$, we get
+\begin{equation}\label{Eq:term2}
+\text{II}=-\frac14\,g^{\mu\nu}\,\text{Tr}\!\big(\Phi^{-1}\partial_\mu\Phi\,\Phi^{-1}\partial_\nu\Phi\big)=-\frac{g^{\mu \nu}}{2 v^2} \partial_\mu v \partial_\nu v - \frac{g^{\mu \nu}}{4} \text{Tr}(M^{-1}\partial_\mu M M^{-1}\partial_\nu M)
+\end{equation}
+Note that $\text{Tr}(M^{-1}\partial_\mu M)= \partial_\mu \text{ln} \det M=0$.\\
+%=====================================================================
+\\
+\textbf{Maxwell term}
+
+Now, we examine the Maxwell term,
+\begin{equation}
+\begin{aligned}
+S_{Maxwell}=&-\frac{1}{4G_4}\int d^4x\,\sqrt{-G}\;F_{AB}F_{CD}\,G^{AC}G^{BD}\\
+&\quad=-\frac{1}{4G_4}\int d^4x\,\sqrt{-g}\,\sqrt{\det\Phi}\,\Big(F_{\mu\nu}F_{\rho\sigma}\,g^{\mu\rho}g^{\nu\sigma}
++F_{ab}F_{cd}\,\Phi^{ac}\Phi^{bd}
++2\,F_{a\mu}F_{b\nu}\,\Phi^{ab}g^{\mu\nu}\Big).
+\end{aligned}
+\label{eq:KK-F2-reduce}
+\end{equation}
+Now, since all fields depend only on $(r,t)$,
+\begin{equation}
+\quad F_{xx}=F_{yy}=0,\quad F_{a\mu}=-\partial_\mu A_a .
+\label{eq:KK-Fcomp}
+\end{equation}
+Therefore,
+\begin{equation}
+S_{\text{Maxwell}}=-\frac{V_2}{4G}\int d^2x\,\sqrt{-g}\,\sqrt{\det\Phi}\,\Big(F_{\mu\nu}F^{\mu\nu}
++2\,(\partial_\mu A_a)(\partial_\nu A_b)\,\Phi^{ab}g^{\mu\nu} + F_{xy}F_{xy} (\Phi^{xx} \Phi^{yy} - (\Phi^{xy}) ^2 )\Big)
+\label{eq:KK-Smax-jordan}
+\end{equation}
+%Here, we can set  substitute $F_{xy}=Q_M$. \\
+
+Combining all the terms, we get the KK reduced action
+\begin{equation}
+\begin{aligned}
+S_2=&\frac{V_2}{16\pi G_4}\int_{\mathcal M} d^2x\,\sqrt{-g}\,v\,
+\Big[R-2\Lambda + \frac{g^{\mu \nu}}{2 v^2} \partial_\mu v \partial_\nu v
+- \frac{g^{\mu \nu}}{4}\text{Tr}(M^{-1}\partial_\mu M M^{-1}\partial_\nu M)\Big]\\
+ & +\frac{V_2}{8\pi G_4}\int_{\partial\mathcal M} dx\,\sqrt{-\gamma}\,vK\;+ S_{Maxwell};
+\end{aligned}
+\label{eq:KK-reduced}
+\end{equation}
+\\
+%=====================================================================
+\textbf{Weyl rescaling to the Einstein frame}
+
+Now, we Weyl rescale to go to the Einstein frame. A general Weyl rescaling in 2D gives
+\begin{equation}
+g\to\alpha(x)\,g\quad\Rightarrow\quad \sqrt{-g}\,R\;\to\;\sqrt{-g}\,\big(R-\Box_g\ln\alpha(x)\big),\qquad \alpha(x)>0 .
+\label{eq:KK-weyl}
+\end{equation}
+The kinetic term in the action is
+\begin{equation}
+\frac{1}{2v^2}\sqrt{-g}\;g^{\mu\nu}\partial_\mu v\,\partial_\nu v .
+\label{eq:KK-vkin}
+\end{equation}
+If $\alpha=v^b$, then
+\begin{equation}
+\begin{aligned}
+\sqrt{-g}\,v\,R\;&\to\;\sqrt{-g}\;v\,\big(R-b\,\Box\ln v\big)\\
+\end{aligned}
+\label{eq:KK-weyl-v}
+\end{equation}
+So we rescale the metric by
+\begin{equation}
+g_{\mu\nu}\;\to\;\frac{r_h}{v^{1/2}}\;g_{\mu\nu}.
+\label{eq:KK-rescale}
+\end{equation}
+
+which cancels the kinetic terms coming from term I and II. The action becomes ($v^2= \det \Phi$)
+\begin{equation}
+\begin{aligned}
+S_2=&\frac{V_2}{16\pi G_4}\int_{\mathcal M} d^2x\,\sqrt{-g}\,\Big(v R-2 \Lambda\,\sqrt{v} r_h
+-\frac{v}{4}\,g^{\mu\nu}\,\text{Tr}\!\big(M^{-1}\partial_\mu M\,M^{-1}\partial_\nu M\big)\Big)\\
+&+\frac{V_2}{8\pi G_4}\int dx\,\sqrt{-h}\;vK\;+\;S_{\text{Maxwell}}
+\end{aligned}
+\label{eq:KK-S2}
+\end{equation}
+
+\begin{equation}
+S_{\text{Maxwell}}=-\frac{V_2}{4G_4}\int d^2x\,\sqrt{-g}\,\sqrt{v}\,r_h\Big(F_{\mu\nu}F^{\mu\nu}\frac{v}{r_h^2}
++2\,(\partial_\mu A_a)(\partial_\nu A_b)\,\Phi^{ab}g^{\mu\nu}\frac{\sqrt{v}}{r_h} + \frac{Q_M}{v^2} )
+\label{eq:Maxwell}
+\end{equation}
+\\
+We restrict ourselves to the magnetic charge sector, therefore we can set $F_{\mu \nu}=0$ and $A_a=A_b=0$. \\
+
+\begin{equation}\label{Eq: Maxwell}
+S_{\text{Maxwell}}=-\frac{V_2}{4G_4}\int d^2x\,\sqrt{-g}\,\sqrt{v}\,r_h \frac{Q_M}{v^2}
+\end{equation}
+
+\\
+%=====================================================================
+\subsection{JT theory}
+Now, to make contact with the JT theory, we expand $\Phi$. let
+\begin{equation}
+\Phi_{ij}=r_h^2\,(\mathbb{I}+\phi)^2_{ij},\qquad
+v=\sqrt{\det\Phi}=r_h^2\,\det{}(\mathbb{I}+\phi).
+\label{eq:KK-Phi-phi}
+\end{equation}
+ $\phi_{ij}(t,r)$ is a symmetric $2\times2$ matrix with components
+$\phi_{xx},\phi_{xy}$  and $\phi_{yy}$.\\
+
+First, we expand to linear order in $\phi$ to get
+\begin{equation}
+v=r_h^2\,(1+\Tr \phi)+\mathcal O(\phi^2).
+\label{eq:KK-v-lin}
+\end{equation}
+
+
+Reduced action becomes
+
+\begin{equation}
+\begin{aligned}
+S_2={}&\frac{V_2\,r_h^2}{16\pi G_4}\int_{\mathcal M}d^2x\,\sqrt{-g}\,\Big[(R-2 \Lambda)+\text{Tr}(\phi)\,\Big(R-\Lambda\Big)\Big]-\frac{V_2 r_h^2}{4G}\int d^2x\,\sqrt{-g}\,\, \frac{Q_M^2}{r_h^4}
+\\&-\frac{V_2 r_h^2}{4G_4}\int d^2x\,\sqrt{-g}\,\, \frac{Q_M^2}{r_h^4}(\frac{\Tr(\phi)}{2}-  \phi_{xx}-\phi_{yy})+\frac{V_2\,r_h^2}{8\pi G_4}\int dx\,\sqrt{-h}\;K\,(1+\text{Tr}(\phi))\;   +\;\mathcal O(\phi^2)
+\end{aligned}
+\label{eq:KK-S2-lin}
+\end{equation}
+% NOTE: the value of \# was transcribed from a small handwritten note; please verify.
+
+%=====================================================================
+\subsection{Cubic vertices for tree level 4-point function}
+
+Now we study the $\sim\phi^2$ and $\sim\phi^3$ terms for $\phi_{xy}$ tree level 4-point function. Since $\det\Phi=r_h^4\,[\det(\mathrm{I}+\phi)]^2$, We have $\sqrt{\det\Phi}=v=r_h^2\det(1+\phi)$ :
+\begin{align}
+\mathcal O(\phi^0):&\quad r_h^2 \label{eq:KK-sqrtdet-0}\\[4pt]
+\mathcal O(\phi^1):&\quad r_h^2 \Tr (\phi) \label{eq:KK-sqrtdet-1}\\[4pt]
+\mathcal O(\phi^2):&\quad r_h^2\left(\phi_{xx}\phi_{yy}-\phi_{xy}^2\right) \label{eq:KK-sqrtdet-2}\\[4pt]
+\end{align}
+Here, the $\mathcal O (\phi^2)$  term in the determinant gives mass to the shear mode via the gauge field term.\\
+
+\textbf{Q=-$\frac{v}{4}g^{\mu\nu}\,\text{Tr}\!\big(M^{-1}\partial_\mu M\,M^{-1}\partial_\nu M\big)$ Term}
+
+To simplify the analysis, we define, using \ref{Eq:term2}
+\begin{equation}
+    Q= \frac{-v}{4}g^{\mu\nu}\,\text{Tr}\!\big(\Phi^{-1}\partial_\mu \Phi\,\Phi^{-1}\partial_\nu \Phi\big) +\frac{g^{\mu \nu} }{2v}\partial_\mu v \partial_\nu v
+\end{equation}
+Let 
+\begin{equation}
+\begin{aligned}
+Q_1&=\frac{-v}{4}g^{\mu\nu}\,\text{Tr}\!\big(\Phi^{-1}\partial_\mu \Phi\,\Phi^{-1}\partial_\nu \Phi\big) \\&=v g^{\mu\nu}\Big[\,\,\Tr(\partial_\mu\phi\,\partial_\nu\phi)\;-\;2\,\Tr(\phi\,\partial_\mu\phi\,\partial_\nu\phi)\Big]+\mathcal O(\phi^4),
+\label{eq:KK-kin}
+\end{aligned}
+\end{equation}
+and,
+\begin{equation}
+Q_2=\frac{g^{\mu \nu} }{2v}\partial_\mu v \partial_\nu v
+\end{equation}
+
+Now we study the terms in action(\ref{eq:KK-S2} and  \ref{Eq: Maxwell}) which are quadratic in $\phi_{xy}$.
+
+\begin{equation}
+\begin{aligned}
+S_2\big|_ {\phi_{xy}^2}=\frac{V_2 r_h^2}{16\pi G_4}\int_\mathcal{M} d^2x \sqrt{-g}\big ((-R+\Lambda)\phi_{xy}^2-2g^{\mu \nu} \partial_\mu\phi_{xy}\partial_\nu\phi_{xy} \big)-\frac{V_2 r_h^2}{4G_4}\int_\mathcal{M} d^2x \sqrt{-g} \frac{Q_M^2}{r_h^5}
+\end{aligned}
+\label{eq:KK-kin-xy2}
+\end{equation}
+This is the kinetic term for the shear mode. This also gives us the cubic vertices with exchange of $h_{tt}, h_{tr} \text{ and } h_{rr}$. These exchanges exactly match with what we would have for a minimally coupled scalar. Note that $Q_2$ doesn't contribute any $\phi_{xy}^2$ term. Now, the point would be to show that other cubic vertex discussed below have contributions suppressed in $r_h$ compared to the $h_{tt}, h_{tr} \text{ and } h_{rr}$ exchanges.
+\subsubsection*{(b) Cubic terms of the form $\phi_{xy}^2\times\phi$}
+\begin{equation}
+\begin{aligned}
+K\Big|_{\phi_{xy}^2\phi}
+=\;&g^{tt}\Big[-8\,(\phi_{xx}+\phi_{yy})(\partial_t\phi_{xy})^2
+-16\,\phi_{xy}(\partial_t\phi_{xy})(\partial_t\phi_{xx}+\partial_t\phi_{yy})\Big]\\[4pt]
++\;&g^{tr}\Big[-16\,(\phi_{xx}+\phi_{yy})(\partial_t\phi_{xy})(\partial_r\phi_{xy})
+-16\,\phi_{xy}(\partial_t\phi_{xy})(\partial_r\phi_{xx}+\partial_r\phi_{yy})\\
+&\qquad-16\,\phi_{xy}(\partial_r\phi_{xy})(\partial_t\phi_{xx}+\partial_t\phi_{yy})\Big]\\[4pt]
++\;&g^{rr}\Big[-8\,(\phi_{xx}+\phi_{yy})(\partial_r\phi_{xy})^2
+-16\,\phi_{xy}(\partial_r\phi_{xy})(\partial_r\phi_{xx}+\partial_r\phi_{yy})\Big]
+\end{aligned}
+\label{eq:KK-kin-xy2phi}
+\end{equation}
+Covariantly,
+\begin{equation}
+K\Big|_{\phi_{xy}^2\phi}=-8\,g^{\mu\nu}\Big[(\phi_{xx}+\phi_{yy})\,\partial_\mu\phi_{xy}\,\partial_\nu\phi_{xy}
++\partial_\mu\big(\phi_{xy}^2\big)\,\partial_\nu(\phi_{xx}+\phi_{yy})\Big].
+\label{eq:KK-kin-xy2phi-cov}
+\end{equation}
+Combining all the terms, the relevant action for the $\phi_{xy}$ mode becomes:
+\begin{equation}\label{phi action}
+    S_{\phi_{xy}}=\frac{V_3 r_h^3}{16\pi G}\int_{\mathcal M} d^2x\,\sqrt{-g}\, \,\,\big(8 g^{\mu\nu}\partial_\mu\phi_{xy}\,\partial_\nu\phi_{xy}+ 4\pi F^2 \phi_{xy}^2 -8\,g^{\mu\nu}\Big[(\phi_{xx}+\phi_{yy})\,\partial_\mu\phi_{xy}\,\partial_\nu\phi_{xy}
++\partial_\mu\big(\phi_{xy}^2\big)\,\partial_\nu(\phi_{xx}+\phi_{yy})\Big] \big)
+\end{equation}
+Here, the cubic vertices in \ref{phi action} involve $\phi_{xx}$ and $\phi_{yy}$, which at leading order goes like $\mathcal{O}(\frac{r-r_h}{r_h})$,  whereas the $h_{tt}, h_{tr} \text{ and } h_{rr}$ exchanges are enhanced by $r_h$, as seen in \ref{epselon solution} or \\\ref{bdy side action}.  The dominant contribution to the tree-level four point function of $\phi_{xy}$ comes from \ref{eq:KK-kin-xy2}, which is $r_h^4$ enhanced, while the other vertices are suppressed by  $\frac{1}{r_h}$. This conclusively shows that shear mode behaves like a minimally coupled massive scalar in the near extremal blackhole background in the leading order in $r_h$. The mass of the scalar field is determined by $(\frac{Q}{r_h^3})^2$.
+
+(Express the Q in terms of $r_h$ and write the mass in $L_2$ units)
+%================================================================
+
+\section{Bulk Action}
+
+\label{sec:Bulk Action}
+
+
+
+\appendix
+\section{Details of Bulk calculation}
+\label{sec: Appendix A}
+
+
+
+
+
+\acknowledgments
+
+This is the most common positions for acknowledgments. A macro is
+available to maintain the same layout and spelling of the heading.
+
+\paragraph{Note added.} This is also a good position for notes added
+after the paper has been written.
+
+% All figures and tables should be referenced in the text and should be
+% placed on the page where they are first cited or in
+% subsequent pages. Positioning them in the source file
+% after the paragraph where you first reference them usually yield good
+% results. See figure~\ref{fig:i} and table~\ref{tab:i} for layout examples. 
+% Please note that a caption is mandatory  and it must be placed at the bottom of both figures and tables.
+
+% \begin{figure}[htbp]
+% \centering
+% \includegraphics[width=.4\textwidth]{example-image-a}
+% \qquad
+% \includegraphics[width=.4\textwidth]{example-image-b}
+% \caption{Always give a caption.\label{fig:i}}
+% \end{figure}
+
+% \begin{table}[htbp]
+% \centering
+% \begin{tabular}{lr|c}
+% \hline
+% x&y&x and y\\
+% \hline
+% a & b & a and b\\
+% 1 & 2 & 1 and 2\\
+% $\alpha$ & $\beta$ & $\alpha$ and $\beta$\\
+% \hline
+% \end{tabular}
+% \caption{We prefer to have top and bottom borders around the tables.\label{tab:i}}
+% \end{table}
+
+% We discourage the use of inline figures (e.g. \texttt{wrapfigure}), as they may be
+% difficult to position if the page layout changes.
+
+% We suggest not to abbreviate: ``section'', ``appendix'', ``figure''
+% and ``table'', but ``eq.'' and ``ref.'' are welcome. Also, please do
+% not use \texttt{\textbackslash emph} or \texttt{\textbackslash it} for
+% latin abbreviaitons: i.e., et al., e.g., vs., etc.
+
+
+% \paragraph{Up to paragraphs.} We find that having more levels usually
+% reduces the clarity of the article. Also, we strongly discourage the
+% use of non-numbered sections (e.g.~\texttt{\textbackslash
+%   subsubsection*}).  Please also consider the use of
+% ``\texttt{\textbackslash texorpdfstring\{\}\{\}}'' to avoid warnings
+% from the \texttt{hyperref} package when you have math in the section titles.
+
+% Bibliography
+
+%% [A] Recommended: using JHEP.bst file
+%% \bibliographystyle{JHEP}
+%% \bibliography{biblio.bib}
+
+%% or
+%% [B] Manual formatting (see below)
+%% (i) We suggest to always provide author, title and journal data or doi:
+%% in short all the informations that clearly identify a document.
+%% (ii) please avoid comments such as "For a review'', "For some examples",
+%% "and references therein" or move them in the text. In general, please leave only references in the bibliography and move all
+%% accessory text in footnotes.
+%% (iii) Also, please have only one work for each \bibitem.
+
+% \begin{thebibliography}{99}
+
+% \bibitem{a}
+% Author,
+% \emph{Title},
+% \emph{J. Abbrev.} {\bf vol} (year) pg.
+
+% \bibitem{b}
+% Author,
+% \emph{Title},
+% arxiv:1234.5678.
+
+% \bibitem{c}
+% Author,
+% \emph{Title},
+% Publisher (year).
+
+% \end{thebibliography}
+\end{document}
